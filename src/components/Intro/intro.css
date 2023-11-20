@@ -1,0 +1,213 @@
+#intro {
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 100rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-box {
+    width: 560px;
+    height: 560px;
+    position: relative;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-box img {
+    object-fit: cover;
+    border: 5px solid white; /* corrected typo: changed '50x' to '5px' */
+    border-radius: 50%;
+    box-shadow: 10px 10px 50px white;
+    background-color: #97fff9;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+}
+
+.text-box {
+    width: 50%;
+    margin: 20px 0px 0px 80px;
+    text-align: start;
+    position: relative;
+    color: white;
+}
+.text-box .hello{
+    font-size: large;
+    font-weight: 300;
+}
+
+.text-box .skills {
+    color: #97fff9;
+}
+
+.text-box h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.text-box p{
+    font-size: medium;
+    font-weight: 300;
+    letter-spacing: 0.15vw;
+}
+
+.text-box .icon-box {
+    width: 6vh;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0px;
+}
+
+.text-box .icon-box i {
+    border-radius: 50%;
+    display: flex;
+    align-items: start;
+    margin: 0 1vw;
+    border: 2px solid white;
+    padding: 6px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.text-box .icon-box i:hover {
+    background-color: white;
+    color: #3b3b3b;
+}
+
+.text-box button {
+    position: relative;
+    width: 150px;
+    height: 32px;
+    background: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+
+.text-box .downloadBtn {
+    margin-right: 15px;
+    color: rgb(255, 255, 255);
+    font-size: medium;
+}
+
+.text-box button::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    transition: 0.5s;
+    z-index: -1;
+    
+}
+
+.text-box .downloadBtn:hover {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+}
+
+.text-box .downloadBtn:hover::before {
+    left: 0;
+    width: 0;
+}
+.text-box .hairMe  Btn {
+    margin-right: 15px;
+    color: rgb(255, 255, 255);
+    font-size: medium;
+}
+
+.text-box .hairMeBtn::before {
+    right: 0;
+    width: 0;
+    
+}
+
+.text-box .hairMeBtn:hover {
+    color: black;
+    background-color: white;
+}
+
+.text-box .hairMeBtn:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+@keyframes loadAnimation {
+    100% {
+        width: 0;
+    }
+}
+
+#intro::before,
+.text-box::before,
+.img-box::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(30, 30, 30);
+    transition: 0.5s;
+    z-index: 2;
+    animation: loadAnimation 1s ease forwards;
+}
+
+.text-box::before {
+    animation-delay: 1s;
+}
+
+.img-box::before {
+    animation-delay: 2s; /* corrected typo: changed '::before' to 'img-box::before' */
+}
+
+@media (max-width: 750px) {
+    #intro {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-box {
+        margin-left: 0;
+    }
+
+    .text-box {
+        width: 90%;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .text-box .icon-box {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Align icons at the center */
+        margin: 15px 0; /* Decrease space between icons */
+    }
+    
+    .text-box .icon-box i {
+        border-radius: 50%;
+        border: 2px solid white;
+        padding: 6px;
+        font-size: 25px;
+        cursor: pointer;
+        transition: 0.2s;
+        margin: 0 5px; /* Decrease space between icons */
+    }
+
+    .text-box button {
+        width: 30%;
+        margin-top: 15px;
+    }
+}
