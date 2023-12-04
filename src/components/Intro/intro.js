@@ -7,10 +7,10 @@ const Intro = () => {
     useEffect(() => {
         // Initialize Typed inside useEffect
         var typed = new Typed(".skills", {
-            strings: ["Full Stack Developer"], // corrected typo: changed 'string' to 'strings'
+            strings: ["Full-Stack Developer", 'back-end Developer', 'Front-Stack Developer'], // corrected typo: changed 'string' to 'strings'
             typeSpeed: 100,
-            backSpeed: 50,
-            backDelay: 100,
+            backSpeed:100,
+            backDelay: 500,
         });
 
         // Cleanup function for Typed

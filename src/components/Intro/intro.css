@@ -25,10 +25,17 @@
     border: 5px solid white; /* corrected typo: changed '50x' to '5px' */
     border-radius: 50%;
     box-shadow: 10px 10px 50px white;
-    background-color: #97fff9;
+    background-color: #4f5d75;
     width: 400px;
     height: 400px;
     position: absolute;
+}
+@media screen and (max-width:750) {
+    .img-box img {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+    }
 }
 
 .text-box {
@@ -44,7 +51,7 @@
 }
 
 .text-box .skills {
-    color: #97fff9;
+    color: #4f5d75;
 }
 
 .text-box h1 {
