@@ -98,6 +98,7 @@
     border-radius: 5px;
     font-size: 20px;
     cursor: pointer;
+    font-size: medium;
     transition: 0.3s;
     color: white;
 }

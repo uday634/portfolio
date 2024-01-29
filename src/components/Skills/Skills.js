@@ -8,6 +8,7 @@ import reactLogo from '../../img/react.png'
 import expressLogo from '../../img/express.png'
 import nodejsLogo from '../../img/nodejs.png'
 import mongodbLogo from '../../img/mongodb.png'
+import sqlLogo from '../../img/sql.png'
 const Skills = () => {
     return (
         <div className="inner">
@@ -18,7 +19,7 @@ const Skills = () => {
                 <div className="skill-box">
                     <div className="skill-title">
                         <div className="img">
-                            <img src={htmlLogo} alt="html" className="skill-icon"/>
+                            <img src={htmlLogo} alt="html" className="skill-icon" />
                         </div>
                         <h3>HTML 5</h3>
                     </div>
@@ -68,7 +69,7 @@ const Skills = () => {
                         <div className="img">
                             <img src={nodejsLogo} alt="nodejs" className="skill-icon"/>
                         </div>
-                        <h3>node.js</h3>
+                        <h3>Node.js</h3>
                     </div>
                 </div>
                 <div className="skill-box">
@@ -76,7 +77,15 @@ const Skills = () => {
                         <div className="img">
                             <img src={mongodbLogo} alt="mongodb" className="skill-icon"/>
                         </div>
-                        <h3>mongoDB</h3>
+                        <h3>MongoDB</h3>
+                    </div>
+                </div>
+                <div className="skill-box">
+                    <div className="skill-title">
+                        <div className="img">
+                            <img src={sqlLogo} alt="html" className="skill-icon"/>
+                        </div>
+                        <h3>MySQL</h3>
                     </div>
                 </div>
             </div>
